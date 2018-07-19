@@ -1,0 +1,49 @@
+@import '../../scss/variables';
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  color: #75a4ff;
+
+  background-image: linear-gradient($gridColor 2px, transparent 0),
+    linear-gradient(90deg, $gridColor 2px, transparent 0),
+    linear-gradient($gridColor 1px, transparent 0),
+    linear-gradient(90deg, $gridColor 1px, transparent 0),
+    linear-gradient(135deg, #0a0746, #070092);
+
+  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px, 100% 100%;
+  background-position: top center;
+  background-attachment: fixed;
+}
+
+body,
+input,
+button {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 200;
+}
+
+#app {
+  overflow: hidden;
+  padding: 20px;
+}
+
+.main {
+  transform-origin: top center;
+  transition: transform 0.3s ease;
+  width: 740px;
+  @media (max-width: 767px) {
+    width: 100%;
+  }
+}
+
+.secondaryView {
+  .main {
+    transform: translate(640px, 0);
+  }
+}

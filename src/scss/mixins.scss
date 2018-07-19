@@ -1,0 +1,22 @@
+%secondary {
+  opacity: 0;
+  transform: translate(-640px, 0);
+  transition: all 0.3s ease;
+  transform-origin: top center;
+  position: fixed;
+  top: 20px;
+  right: 50%;
+  pointer-events: none;
+
+  .table {
+    width: 342px;
+  }
+}
+
+.secondaryView {
+  %secondary {
+    opacity: 1;
+    transform: translate(0, 0);
+    pointer-events: all;
+  }
+}

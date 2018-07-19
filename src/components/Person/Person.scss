@@ -1,0 +1,6 @@
+@import '../../scss/mixins.scss';
+
+.person {
+  margin-right: -252px;
+  @extend %secondary;
+}

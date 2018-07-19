@@ -1,0 +1,9 @@
+.resident {
+  cursor: pointer;
+  padding: 8px 10px;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0px 15px rgba(0, 0, 0, 0.64) inset;
+  }
+}

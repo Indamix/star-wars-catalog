@@ -1,0 +1,35 @@
+@import '../../../scss/variables';
+
+.close {
+  position: absolute;
+  cursor: pointer;
+  right: 8px;
+  top: 4px;
+  width: 32px;
+  height: 36px;
+  border-left: 2px solid $borderColor;
+
+  &:before,
+  &:after {
+    position: absolute;
+    left: 18px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background: $headerColor;
+  }
+
+  &:before {
+    transform: rotate(45deg);
+  }
+  &:after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover {
+    &:before,
+    &:after {
+      background: #fff;
+    }
+  }
+}

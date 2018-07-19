@@ -1,0 +1,66 @@
+@import '../../scss/variables';
+
+.table {
+  border-spacing: 0;
+  border-collapse: separate;
+  border-radius: 5px;
+  overflow: hidden;
+  background-image: linear-gradient(
+    45deg,
+    rgba(12, 0, 255, 0.26),
+    rgba(0, 0, 0, 0.18)
+  );
+  border: 2px solid $borderColor;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+  text-align: right;
+  margin: 0 auto;
+
+  th {
+    $accentColor: #9999ff;
+
+    user-select: none;
+    background: rgba(0, 0, 255, 0.3);
+    color: $headerColor;
+    padding: 5px 10px;
+    height: 28px;
+    font-size: 14px;
+    font-weight: 900;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    &.sortable {
+      cursor: pointer;
+
+      &:hover {
+        background: rgba(60, 60, 255, 0.5);
+      }
+    }
+
+    &.sorted {
+      color: #96bbff;
+      background: rgba(0, 0, 255, 0.5);
+      box-shadow: 0 -2px 0 $accentColor inset;
+    }
+
+    &.reversed {
+      box-shadow: 0 2px 0 $accentColor inset;
+    }
+  }
+
+  td {
+    padding: 0 10px;
+    height: 40px;
+  }
+
+  td,
+  th {
+    &:first-child {
+      text-align: left;
+    }
+  }
+
+  tr:nth-child(2n) {
+    background: rgba(0, 0, 229, 0.09);
+  }
+}

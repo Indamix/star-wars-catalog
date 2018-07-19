@@ -1,0 +1,21 @@
+.grid {
+  tbody {
+    td {
+      cursor: pointer;
+    }
+
+    tr.selected {
+      td {
+        color: #fff;
+      }
+    }
+
+    tr {
+      &:hover,
+      &.selected {
+        background: rgba(0, 0, 0, 0.15);
+        box-shadow: 0 0px 15px rgba(0, 0, 0, 0.64) inset;
+      }
+    }
+  }
+}

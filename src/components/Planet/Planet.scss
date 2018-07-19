@@ -1,0 +1,10 @@
+@import '../../scss/mixins.scss';
+
+.planet {
+  margin-right: 108px;
+  @extend %secondary;
+
+  td {
+    padding: 0;
+  }
+}
